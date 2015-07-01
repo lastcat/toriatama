@@ -2,7 +2,7 @@
 /* label */
 /* イベントの発火順番の操作方法がわからないのでとりあえず注意喚起だけということで…… */
 /* TODO: ここのalert, confirmの結果によってclickをcancelする */
-$(document).bind('click', ".js-issue-sidebar-form", function(){
+$(document).on('click', ".js-issue-sidebar-form", function(){
     if(confirm("Diffチェックしましたか\n不要なコメントアウトはありませんか\nもう一度上で投げられたコメントを全て読み返して対応済みかどうか確認してください") == true){
       var description = $(".comment-body")[0].innerHTML
       if (!(/目的/.test(description) && /やること/.test(description))){
